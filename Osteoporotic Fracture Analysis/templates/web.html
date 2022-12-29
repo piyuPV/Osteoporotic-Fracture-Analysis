@@ -1,0 +1,224 @@
+<html>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<head>
+    <title>
+    Osteoporotic Fracture Analysis
+    </title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <style>
+
+
+
+body {
+    background-color: #000000;
+}
+form {
+    background-color: #ffffff;
+}
+
+        body {
+      font-family: 'Anaheim';
+      font-size: 1.2em;
+    }
+    
+    #outside {
+      background-color: lightgoldenrodyellow;
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+    
+    h1 {
+      font-size: 1.5em;
+      text-align: center;
+      text-transform: capitalize;
+    }
+    
+    form {
+      /* Just to center the form on the page */
+      margin: 0 auto;
+      width: 70%;
+      /* To see the limits of the form */
+      padding: 1em;
+      border: 1px solid #CCC;
+      border-radius: 1em;
+      
+    }
+    #survey-form {
+      background-color: white;
+    }
+    
+    fieldset { 
+      border:1px solid lightgray;
+      margin: 10px;
+     }
+    
+    legend {
+      font-weight: 700;
+    }
+    
+    #number {
+      width: 150px;
+    }
+    
+    
+    div + div {
+      margin-top: 1em;
+      }
+    
+    /* label {
+      /* To make sure that all label have the same size and are properly align */
+      /* display: inline-block; */
+      /* width: 80px; */
+      /* text-align: right; */
+    } */
+    
+    input, textarea {
+      /* To make sure that all text field have the same font settings
+         By default, textarea are set with a monospace font */
+      /* font: 1em sans-serif; */
+    
+      /* To give the same size to all text field */
+      width: 200px;
+    
+    /*   -moz-box-sizing: border-box;
+           box-sizing: border-box; */
+    
+      /* To harmonize the look & feel of text field border */
+      border: 1px solid #999;
+    }
+    
+    input:focus, textarea:focus {
+      /* To give a little highligh on active elements */
+      border-color: OrangeRed;
+    }
+    
+    textarea {
+      /* To properly align multiline text field with their label */
+      vertical-align: top;
+    
+      /* To give enough room to type some text */
+      height: 5em;
+    
+      /* To allow users to resize any textarea vertically
+         It works only on Chrome, Firefox and Safari */
+      resize: vertical;
+    }
+    
+    .button {
+      /* To position the buttons to the same position of the text fields */
+      padding-left: 90px; /* same size as the label elements */
+    }
+    
+    button {
+      margin: .5em;
+      font-size: 1em;
+      text-transform: capitalize;
+      background-color: red;
+      color: white;
+      border: none;
+      padding: 5px;
+      border-radius: 2px;
+      
+    }
+    
+    #submitbutton {
+      display: flex; 
+      justify-content: center;
+    }
+    
+    
+    </style>
+    
+</head>
+<body>
+    <form  class='grid' action="/result" method="post">
+    <br><br>
+    <div class="container mt-5" action="/result" method="Post">
+        <b><h1 >Osteoporotic Fracture Analysis</h1></b>
+  <p id="description"><b>Note:</b> Kindly fill right details</p>
+  
+  <div>
+    <label id="name-label">Name:</label>
+    <input type="text"  required id="name" name="user_name" placeholder="Enter name here"  >   </div>
+    <div>
+        <label for="Age">Age:</label>
+        <input type="number" id="Age" name="Age" placeholder="Enter Age here">   </div>
+  
+  
+      <div>
+  
+        <label for="SEX" >Gender    :   </label>
+        <select name="SEX" id="cars" style='z-index: 1;left: 600px;  position: absolute; height: 25px; width:190px ; background-color: rgba(255, 255, 255, 0.2)' >
+          <option value='1'>Male</option>
+          <option value="0">Female</option>
+          </select>
+  </div>
+  
+  
+      <div>
+  
+        <label for="Prob" >ASSO MEDICAL PROB:</label>
+        <select name="Prob" id="cars" style='z-index: 1;  position: absolute;left: 600px; height: 25px; width:190px ; background-color: rgba(255, 255, 255, 0.2)' >
+          <option value='0'>No</option>
+          <option value="1">Yes(Diabetes)</option>
+          <option value="2">Yes(Bp)</option>
+          <option value="3">Kidney Stone</option>
+          <option value="4">Yes(Increase In Heart Rate)</option>
+          <option value="5">Yes(Diabetes,Bp)</option>
+          <option value="6">Yes(Diabetes,Blockage in Heart)</option>
+          <option value="7">Yes(Diabetes,Kidney Stone)</option>
+          </select></div>
+          <br>
+          <br>
+      
+        <div>
+        <label for="INJURY" >H/O INJURY/SURGERY:</label>
+        <select name="INJURY" id="cars" style='z-index: 1;  position: absolute;left: 600px; height: 25px; width:190px ; background-color: rgba(255, 255, 255, 0.2)'>
+                          <option value='0'>No</option>
+                          <option value="1">Vericose Vein Surgery</option>
+                          <option value="2">Uteres Removal</option>
+                          <option value="3">Kidney Stone Opreration</option>
+                          <option value="4">Uterus Surgery</option>
+                          <option value="5">Yes(Diverticulities)</option>
+                          <option value="6">Shouler Surgery</option>
+                          <option value="7">Knee Surgery</option>
+                          <option value="8">Yes(Open Heart Surgery)</option>
+                          </select>
+     </div>
+          <div>
+              <label for="DRUG" >DRUGS:</label>
+              <select name="DRUG" id="cars" style='z-index: 1;  position: absolute;left: 600px; height: 25px; width:190px ; background-color: rgba(255, 255, 255, 0.2)'>
+                  <option value='0'>No</option>
+                  <option value="1">Yes</option>
+                  <option value="2">Yes(Ecosprin)</option>
+                  </select><br><br>
+          </div>
+          <br>
+                        <center><button type="submit" style='z-index: 1;  width:100px ; background-color: rgba(86, 152, 169, 0.827)'>Submit</button>
+                        </center>
+                    </div>
+                    <py-script>
+                    </py-script>
+                    <div class="card-footer" style="background-color: rgba(255, 255, 255, 0.2)" align="center">
+                        <center>
+                            {% if name %}
+                             <p><B>
+                                You may have:</B> {{name}}
+                            </p>
+                            {% endif %}
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+  
+      
+</body>
+</html>
